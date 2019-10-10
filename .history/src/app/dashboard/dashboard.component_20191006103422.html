@@ -1,0 +1,29 @@
+<h1 class="card-header bg-info">
+    Trend Search
+  </h1><div class="container">
+
+  <div class="row" style="margin-top: 20px">    
+      <button onclick="goBack()">Go Back</button>
+    <div class="row ml-5">
+      <div class="col">
+        <div class="row">
+          <h4>
+           Customers Transcations History based on Trends
+          </h4>
+        </div>
+        <div class="row">
+          <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="trends" 
+          [gradient]="gradient" [xAxis]="showXAxis"
+            [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" 
+            [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical>
+        </div>
+      </div>
+    
+    </div>
+    
+   
+
+  </div>
+ 

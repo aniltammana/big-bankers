@@ -1,0 +1,63 @@
+<h1 class="card-header bg-info">
+  Trend Search
+</h1>
+<div class="container">
+  <div class="row" style="margin-top: 20px">
+    <button class="btn btn-primary col-md-2" onclick="javascript:window.history.back()">Go Back</button>
+    <div class="col-md-7"></div>
+    <button [routerLink]="['/visualize']" class="btn btn-secondary col-md-3">See Visualization</button>
+  </div>
+  <div class="row" style="margin-top: 20px">
+      <div class="col-xs-12 ">
+        <nav>
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" 
+            aria-controls="nav-home" aria-selected="true"> Customers Transcations History based on Trends</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+          
+          </div>
+        </nav>
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="trends" [gradient]="gradient" [xAxis]="showXAxis"
+              [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+            </ngx-charts-bar-vertical>
+  
+          </div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <ngx-charts-line-chart [scheme]="{domain: ['#ef6c00']}" [results]="lineTrends" [xAxis]="true" [yAxis]="true"
+              [legend]="false" [showXAxisLabel]="true"
+               [showYAxisLabel]="true" [xAxisLabel]="'Trending'" [yAxisLabel]="'Spending'" [autoScale]="true">
+               </ngx-charts-line-chart>
+           </div>
+          </div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+          </div>
+          <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  <div class="row" style="margin-top: 20px">
+
+    <div class="row ml-5">
+      <div class="col">
+        <div class="row">
+          <h4>
+           
+          </h4>
+        </div>
+        <div class="row">
+        
+
+        </div>
+
+        <div class="row">
+        
+      </div>
+    </div>
+  </div>
